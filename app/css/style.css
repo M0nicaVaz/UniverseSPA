@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --nav-height: 6.8rem;
+
+  --accent-clr: hsl(194, 97%, 31%);
+  --text-clr: hsl(240, 9%, 89%);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-clr);
+
+  width: 100%;
+  height: 100%;
+  background-color: hsl(210, 100%, 7%);
+  background-image: url('/app/assets/bg-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+
+  background-attachment: fixed;
+}
+
+.universe {
+  background-image: url('/app/assets/bg-2.jpg');
+}
+
+.explore {
+  background-image: url('/app/assets/bg-3.jpg');
+}
+
+body.home li:nth-child(1) {
+  font-weight: 700;
+}
+
+body.universe li:nth-child(2) {
+  font-weight: 700;
+}
+
+body.explore li:nth-child(3) {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-clr);
+}
+
+img {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+nav {
+  padding: 0 7.2rem;
+  position: relative;
+
+  padding: 5rem 0 0;
+
+  width: 100%;
+}
+
+nav ul {
+  font-size: 1.2rem;
+  line-height: 150%;
+
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 3.2rem;
+
+  margin-left: 7rem;
+
+  width: 100%;
+  padding: 0 5.2rem;
+  text-align: center;
+}
+
+nav ul li {
+  position: relative;
+  font-size: clamp(1.4rem, 1.6rem + 0.2vw, 1.8rem);
+  font-weight: 400;
+}
+
+nav ul li::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  background-color: var(--accent-clr);
+  transition: width 250ms;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+.active {
+  font-weight: bold;
+}
+
+#root {
+  min-height: calc(100vh - var(--nav-height));
+  width: 100vw;
+  display: grid;
+}
+
+main {
+  width: min(64.8rem, 100vw);
+}
+
+main.land {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+main.content {
+  align-self: center;
+  justify-self: flex-start;
+  padding: 0 4rem;
+}
+
+main.land h1 {
+  font-size: clamp(3.8rem, 4rem + 0.2vw, 6rem);
+}
+
+main.content h1 {
+  font-size: clamp(4rem, 4.2rem + 0.2vw, 4.8rem);
+  line-height: 125%;
+}
+
+main.content p {
+  font-weight: 400;
+  font-size: clamp(1.4rem, 1.4rem + 0.2vw, 1.8rem);
+  line-height: 160%;
+}
+
+main.land .btn {
+  color: var(--text-clr);
+  font-size: 1.4rem;
+
+  display: inline-block;
+  padding: 1.2rem 3.2rem;
+  background: transparent;
+
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+
+  margin-top: 2.4rem;
+  cursor: pointer;
+
+  transition: background 200ms, color 250ms;
+}
+
+main.land .btn:hover {
+  background: #ffffff;
+  color: var(--accent-clr);
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+    background-size: 1600% 1600%;
+  }
+
+  75% {
+    opacity: 1;
+    filter: brightness(3);
+    background-size: 100% 100%;
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+    background-size: 120% 120%;
+  }
+}

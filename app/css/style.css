@@ -28,12 +28,24 @@ body {
   background-attachment: fixed;
 }
 
-.universe {
+body.universe {
   background-image: url('/app/assets/bg-2.jpg');
+
+  background-color: hsl(210, 100%, 7%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
-.explore {
+body.explore {
   background-image: url('/app/assets/bg-3.jpg');
+
+  background-color: hsl(210, 100%, 7%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 body.home li:nth-child(1) {
